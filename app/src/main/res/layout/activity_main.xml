@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:text="@string/intro_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/introTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/normal_text_size"/>
+
+    <TextView
+        android:text="@string/height_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heightTextView"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/introTextView"
+        android:textSize="@dimen/normal_text_size"/>
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/heightNumberPicker"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/heightTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/weight_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weightTextView"
+        android:layout_alignBaseline="@+id/heightTextView"
+        android:layout_alignBottom="@+id/heightTextView"
+        android:layout_alignRight="@+id/weightNumberPicker"
+        android:layout_alignEnd="@+id/weightNumberPicker"
+        android:textSize="@dimen/normal_text_size"/>
+
+    <Button
+        android:text="@string/calculateBtnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculateButton"
+        android:layout_alignBaseline="@+id/weightNumberPicker"
+        android:layout_alignBottom="@+id/weightNumberPicker"
+        android:layout_toRightOf="@+id/weightNumberPicker"
+        android:layout_toEndOf="@+id/weightNumberPicker"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:onClick="calculateBtnClick"/>
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weightNumberPicker"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp"
+        android:layout_alignBaseline="@+id/heightNumberPicker"
+        android:layout_alignBottom="@+id/heightNumberPicker"
+        android:layout_toRightOf="@+id/heightNumberPicker"
+        android:layout_toEndOf="@+id/heightNumberPicker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultTextView"
+        android:layout_below="@+id/calculateButton"
+        android:layout_alignLeft="@+id/heightNumberPicker"
+        android:layout_alignStart="@+id/heightNumberPicker"
+        android:layout_marginTop="64dp"
+        android:textSize="@dimen/message_text_size"/>
+
+</RelativeLayout>
